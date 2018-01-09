@@ -43,15 +43,9 @@ import os.path
 # my plugins are available here
 p_path = os.path.split(__file__)[0]
 
-def setup_myglobalplugin():
-    spec = Bunch(path=os.path.join(p_path, 'MyGlobalPlugin.py'),
-                 module='MyGlobalPlugin', klass='MyGlobalPlugin',
-                 tab='My Global', workspace='right', start=False)
-    return spec
-
-def setup_mylocalplugin():
-    spec = Bunch(path=os.path.join(p_path, 'MyLocalPlugin.py'),
-                 module='MyLocalPlugin', klass='MyLocalPlugin',
+def setup_CSU_initializer():
+    spec = Bunch(path=os.path.join(p_path, 'CSU_initializer.py'),
+                 module='CSU_initializer', klass='CSU_initializer',
                  workspace='dialogs')
     return spec
 
