@@ -46,7 +46,8 @@ p_path = os.path.split(__file__)[0]
 def setup_CSU_initializer():
     spec = Bunch(path=os.path.join(p_path, 'CSU_initializer.py'),
                  module='CSU_initializer', klass='CSU_initializer',
-                 workspace='dialogs')
+                 ptype='local', workspace='dialogs',
+                 category="Keck", menu="CSU_initializer", tab='CSU_initializer')
     return spec
 
 # END

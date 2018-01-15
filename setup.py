@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 #
 entry_points = """
 [ginga.rv.plugins]
-CSU_initializer=plugins:setup_CSU_initializer
+CSU_initializer=CSU_initializer_plugin:setup_CSU_initializer
 """
 
 setup(
