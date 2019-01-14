@@ -670,15 +670,9 @@ class CSU_initializer(GingaPlugin.LocalPlugin):
             pixels2[2][0] += draw_height * self.slit_height_pix * np.sin(self.slit_angle_pix)
             pixels2[3][0] -= draw_height * self.slit_height_pix * np.sin(self.slit_angle_pix)
 
-            try:
-                b1color = colormap[state[b1]]
-            except:
-                b1color = 'gray'
-            try:
-                b2color = colormap[state[b2]]
-            except:
-                b2color = 'gray'
-
+            b1color = colormap.get(state[b1], 'gray')
+            b2color = colormap.get(state[b2], 'gray')
+            
             self.canvas.add(self.dc.Polygon(pixels1, color=b1color, alpha=alpha))
             self.canvas.add(self.dc.Polygon(pixels2, color=b2color, alpha=alpha))
             x1, y1 = self.physical_to_pixel([[7.0, j+0.3]])[0]
